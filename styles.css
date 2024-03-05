@@ -1,0 +1,112 @@
+/* styles.css */
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Footer Styles */
+header, footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: yellow; }
+    50% { color: green; }
+    75% { color: blue; }
+    100% { color: purple; }
+    0% { color: red; }
+}
+
+.animated-title {
+    animation-name: colorChange;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: #d4d4d4;
+}
+
+/* Active Link Style */
+.nav-item.active .nav-link {
+    color: #000000 !important;
+}
+
+/* Main Content Styles */
+main {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px;
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer Styles */
+footer {
+    font-size: 0.8em;
+}
+
+/* Form Styles */
+form .form-control {
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+button, .btn {
+    background-color: #000000;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+button:hover, .btn:hover {
+    background-color: #000000;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+/* Responsive Grid Layout for 'My Work' Page */
+.work-experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+/* Resume PDF Link Style */
+.resume-pdf-link {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.resume-pdf-link:hover {
+    background-color: #218838;
+}

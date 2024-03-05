@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .time-banner {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0; /* Light grey background */
+            color: #333; /* Dark text color */
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="HomePage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="work.html">My Work</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <h1 class="animated-title">Welcome to My Website!!!</h1>
+      <p>Welcome to my personal website! 
+        This digital space serves as a canvas for my thoughts, a showcase of my work, and a platform for connecting with others. Whether you're a fellow technology enthusiast, a potential collaborator, or just here to explore, I'm delighted to share my journey with you. Through this site, you'll find insights into my projects, experiences that have shaped my perspective, and the passions that drive me forward. From software development to exploring the latest in tech innovations, my aim is to create content that informs, inspires, and engages.</p>
+        <p>As you navigate through my website, you'll be introduced to the various facets of my professional and personal world. The "About Me" page offers a glimpse into my background, highlighting my hobbies, skills, and academic pursuits that have contributed to my growth. On the "Contact Me" page, you'll find a simple form to get in touch. The "My Work" section is a testament to my journey so far, showcasing my potential projects and experiences that have shaped my career. </p>
+        <img src="PWphoto.png" alt="" class="img-fluid">
+        <div class="time-banner">
+            <div id="time-display">Time will go here</div>
+        </div>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${ampm}`;
+            document.getElementById('time-display').innerText = timeString;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
